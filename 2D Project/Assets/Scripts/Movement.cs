@@ -22,7 +22,6 @@ public class Movement : MonoBehaviour
                 if (!Physics2D.OverlapCircle(movePoint.position + new Vector3(Input.GetAxisRaw("Horizontal"), 0f, 0f), 0.2f, obstacle))
                 {
                     movePoint.position += new Vector3(Input.GetAxisRaw("Horizontal"), 0f, 0f);
-                    movePoint.rotation = Quaternion.Euler(0f, 0f, -90 * Input.GetAxisRaw("Horizontal"));
                 }
             }
             else if (Input.GetAxisRaw("Vertical") != 0f && Input.GetAxisRaw("Horizontal") == 0f)
@@ -31,17 +30,14 @@ public class Movement : MonoBehaviour
                 {
                     movePoint.position += new Vector3(0f, Input.GetAxisRaw("Vertical"), 0f);
                     if (Input.GetAxisRaw("Vertical") == -1){
-                        movePoint.rotation = Quaternion.Euler(0f, 0f, 180 * Input.GetAxisRaw("Vertical"));
                     }
                     else {
-                        movePoint.rotation = Quaternion.Euler(0f, 0f, 0 );
                     }
                 }   
             }
         }
 
         transform.position = Vector3.MoveTowards(transform.position, movePoint.position, moveSpeed * Time.deltaTime);
-        transform.rotation = movePoint.rotation;
         
     }
 }

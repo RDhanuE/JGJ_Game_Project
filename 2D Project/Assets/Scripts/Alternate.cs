@@ -11,11 +11,11 @@ public class Alternate : MonoBehaviour
     {
         for (int i = 0 ; i < ghosts.Length ; i++){
             if (i == 0){
-                ghosts[position].GetComponent<Movement>().enabled = true;
-                ghosts[position].GetComponent<AutomaticMovement>().enabled = false;
+                ghosts[i].GetComponent<Movement>().enabled = true;
+                ghosts[i].GetComponent<AutomaticMovement>().enabled = false;
             } else {
-                ghosts[position].GetComponent<Movement>().enabled = false;
-                ghosts[position].GetComponent<AutomaticMovement>().enabled = true;    
+                ghosts[i].GetComponent<Movement>().enabled = false;
+                ghosts[i].GetComponent<AutomaticMovement>().enabled = true;    
             }
         }
     }
