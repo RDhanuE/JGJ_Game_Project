@@ -17,7 +17,10 @@ public class GameOver : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (GameObject.Find("Fishies") == null){
+            gameManager.IsOver(true);
+            audioSource.PlayOneShot(audioSource.clip, volume);
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D other) {  
