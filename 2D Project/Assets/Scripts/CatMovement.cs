@@ -72,6 +72,7 @@ public class CatMovement : MonoBehaviour
                     }
                 }
             }
+            
             if (MeetDog(Vector2.up)) {
                 if (IsValid(downTile)) {
                     movePoint.position = downTile;
