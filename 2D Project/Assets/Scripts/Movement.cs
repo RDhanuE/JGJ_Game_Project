@@ -7,7 +7,7 @@ public class Movement : MonoBehaviour
     private float moveSpeed = 5f;
     public Transform movePoint;
     public LayerMask obstacle;
-
+    private bool isWalking;
     void Start()
     {
         movePoint.parent = null;
@@ -38,6 +38,9 @@ public class Movement : MonoBehaviour
         }
 
         transform.position = Vector3.MoveTowards(transform.position, movePoint.position, moveSpeed * Time.deltaTime);
-        
+        isWalking = transform.position != movePoint.position;
+    }
+    public bool IsWalking() {
+        return isWalking;
     }
 }
