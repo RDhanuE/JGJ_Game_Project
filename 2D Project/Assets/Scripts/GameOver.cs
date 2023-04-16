@@ -6,10 +6,12 @@ public class GameOver : MonoBehaviour
 {
     public AudioSource audioSource;
     private float volume = 0.8f;
+    private GameManager gameManager;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        gameManager = Camera.main.GetComponent<GameManager>();
     }
 
     // Update is called once per frame
@@ -21,7 +23,7 @@ public class GameOver : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D other) {  
         if (other.gameObject.CompareTag("Player")){
             Debug.Log("Game Over");
-            Time.timeScale = 0f;
+            gameManager.IsOver(true);
             audioSource.PlayOneShot(audioSource.clip, volume);
         }
     }
