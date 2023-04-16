@@ -142,7 +142,7 @@ GameObject:
   - component: {fileID: 153440936}
   - component: {fileID: 153440937}
   m_Layer: 0
-  m_Name: Triangle_1_Sprite
+  m_Name: Doggo_1_Sprite
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -208,7 +208,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 153440924}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.5, y: -0.49999997, z: 0}
+  m_LocalPosition: {x: -2.5, y: 2.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -236,7 +236,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 128
   tileSize: 1
-  Pacman: {fileID: 1674993045}
+  Pacman: {fileID: 1012047543}
 --- !u!50 &153440930
 Rigidbody2D:
   serializedVersion: 4
@@ -501,7 +501,7 @@ GameObject:
   m_Component:
   - component: {fileID: 785516520}
   m_Layer: 0
-  m_Name: Triangle_2_MovePoint
+  m_Name: Doggo_2_Movepoint
   m_TagString: Untagged
   m_Icon: {fileID: -5442936267250999957, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -515,7 +515,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 785516519}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 9.5, y: 2.5, z: 0}
+  m_LocalPosition: {x: 9.5, y: -2.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2412,7 +2412,7 @@ GameObject:
   m_Component:
   - component: {fileID: 860687843}
   m_Layer: 0
-  m_Name: Triangle_2
+  m_Name: Doggo_2
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2447,7 +2447,7 @@ GameObject:
   - component: {fileID: 1012047545}
   - component: {fileID: 1012047544}
   m_Layer: 0
-  m_Name: Tester_Dog
+  m_Name: Catto
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2463,7 +2463,7 @@ Animator:
   m_GameObject: {fileID: 1012047543}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 12f8fe6b9cc9f5648863ba5e46e5980d, type: 2}
+  m_Controller: {fileID: 0}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -2514,7 +2514,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 1513886307, guid: 17027718be6c62848bbab410af6ef372, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c6939aa2418cb3743b25b7b07dec9368, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -2533,7 +2533,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1012047543}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.47, y: 0.54, z: 0}
+  m_LocalPosition: {x: 3.5, y: 0.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3621,8 +3621,10 @@ GameObject:
   - component: {fileID: 1674993051}
   - component: {fileID: 1674993056}
   - component: {fileID: 1674993057}
+  - component: {fileID: 1674993059}
+  - component: {fileID: 1674993058}
   m_Layer: 0
-  m_Name: Triangle_2_Sprite
+  m_Name: Doggo_2_Sprite
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3669,7 +3671,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: c6939aa2418cb3743b25b7b07dec9368, type: 3}
+  m_Sprite: {fileID: 1513886307, guid: 17027718be6c62848bbab410af6ef372, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -3688,7 +3690,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1674993045}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 9.5, y: 2.5, z: 0}
+  m_LocalPosition: {x: 9.5, y: -2.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -3765,7 +3767,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 128
   tileSize: 1
-  Pacman: {fileID: 153440924}
+  Pacman: {fileID: 1012047543}
 --- !u!61 &1674993057
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3792,6 +3794,39 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.32, y: 0.32}
   m_EdgeRadius: 0
+--- !u!114 &1674993058
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1674993045}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d92a03c989a1ec545b960cc6143d5720, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  movement: {fileID: 1674993051}
+--- !u!95 &1674993059
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1674993045}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 12f8fe6b9cc9f5648863ba5e46e5980d, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
 --- !u!1 &1823183976
 GameObject:
   m_ObjectHideFlags: 0
@@ -3802,7 +3837,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1823183977}
   m_Layer: 0
-  m_Name: Triangle_1_MovePoint
+  m_Name: Doggo_1_Movepoint
   m_TagString: Untagged
   m_Icon: {fileID: -5442936267250999957, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -3816,7 +3851,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1823183976}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.5, y: -0.49999997, z: 0}
+  m_LocalPosition: {x: -2.5, y: 2.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3833,7 +3868,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1972782933}
   m_Layer: 0
-  m_Name: Triangle_1
+  m_Name: Doggo_1
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

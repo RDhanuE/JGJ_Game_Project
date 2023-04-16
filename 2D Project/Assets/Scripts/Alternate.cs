@@ -24,7 +24,6 @@ public class Alternate : MonoBehaviour
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.C)){
-            Debug.Log(position);
             ghosts[position].GetComponent<Movement>().enabled = false;
             ghosts[position].GetComponent<AutomaticMovement>().enabled = true;
             position++;
