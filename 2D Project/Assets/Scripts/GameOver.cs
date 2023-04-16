@@ -16,8 +16,7 @@ public class GameOver : MonoBehaviour
         
     }
 
-    private void OnCollisionEnter(Collision other) {  
-        Debug.Log("collide");   
+    private void OnCollisionEnter2D(Collision2D other) {  
         if (other.gameObject.CompareTag("Player")){
             Debug.Log("Game Over");
             Time.timeScale = 0f;
