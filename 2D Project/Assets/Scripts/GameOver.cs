@@ -7,6 +7,7 @@ public class GameOver : MonoBehaviour
     public AudioSource audioSource;
     private float volume = 0.8f;
     private GameManager gameManager;
+    private int counter = 1;
 
     // Start is called before the first frame update
     void Start()
@@ -17,9 +18,11 @@ public class GameOver : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (GameObject.Find("Fishies") == null){
+        if (GameObject.Find("Fishies") == null && counter != 0){
+            Debug.Log("Game Over");
             gameManager.IsOver(true);
             audioSource.PlayOneShot(audioSource.clip, volume);
+            counter--;
         }
     }
 
