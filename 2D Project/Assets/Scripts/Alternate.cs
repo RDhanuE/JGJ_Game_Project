@@ -25,17 +25,19 @@ public class Alternate : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.C)){
-            ghosts[position].GetComponent<Movement>().enabled = false;
-            ghosts[position].GetComponent<AutomaticMovement>().enabled = true;
-            ghosts[position].transform.GetChild(0).gameObject.SetActive(false);
-            position++;
-            if (position == ghosts.Length){
-                position = 0;
+        if (Time.timeScale != 0) {
+            if (Input.GetKeyDown(KeyCode.C)){
+                ghosts[position].GetComponent<Movement>().enabled = false;
+                ghosts[position].GetComponent<AutomaticMovement>().enabled = true;
+                ghosts[position].transform.GetChild(0).gameObject.SetActive(false);
+                position++;
+                if (position == ghosts.Length){
+                    position = 0;
+                }
+                ghosts[position].GetComponent<Movement>().enabled = true;
+                ghosts[position].GetComponent<AutomaticMovement>().enabled = false;
+                ghosts[position].transform.GetChild(0).gameObject.SetActive(true);
             }
-            ghosts[position].GetComponent<Movement>().enabled = true;
-            ghosts[position].GetComponent<AutomaticMovement>().enabled = false;
-            ghosts[position].transform.GetChild(0).gameObject.SetActive(true);
         }
     }
 }
