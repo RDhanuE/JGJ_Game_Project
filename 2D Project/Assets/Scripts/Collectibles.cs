@@ -4,21 +4,14 @@ using UnityEngine;
 
 public class Collectibles : MonoBehaviour
 {
-    public string cat_tag;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public AudioSource audioSource;
+    private float volume = 1f;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    public string cat_tag;
 
     private void OnTriggerEnter2D(Collider2D other) {
         if (other.gameObject.CompareTag(cat_tag)){
+            audioSource.PlayOneShot(audioSource.clip, volume);
             Debug.Log("contact with fish");
             Destroy(gameObject);
         }
