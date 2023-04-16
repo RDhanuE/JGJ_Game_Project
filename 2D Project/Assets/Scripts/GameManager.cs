@@ -11,7 +11,7 @@ public class GameManager : MonoBehaviour
     [SerializeField]private List<GameObject> ghosts = new List<GameObject>();
     [SerializeField]private GameObject cat;
     private void Start() {
-        IsOver(false);
+        IsOver(false, null);
         retryButton = gameOverScreen.GetComponentInChildren<Button>();
         retryButton.onClick.AddListener(delegate { ReloadScene(); });
         List<Vector2> ghostA_spawnPos = new List<Vector2>(3);
@@ -36,9 +36,10 @@ public class GameManager : MonoBehaviour
         cat.GetComponent<CatMovement>().movePoint.position = cat_spawnPos[x];
         cat.transform.position = cat_spawnPos[x];
     }
-    public void IsOver(bool isOver) {
+    public void IsOver(bool isOver, string winner) {
         if (isOver) {
             Time.timeScale = 0;
+            gameOverScreen.transform.GetChild(0).GetChild(0).GetComponent<Text>().text = (winner + " win").ToUpper();
             gameOverScreen.SetActive(true);
         }
         else {

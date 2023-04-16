@@ -20,7 +20,7 @@ public class GameOver : MonoBehaviour
     {
         if (GameObject.Find("Fishies") == null && counter != 0){
             Debug.Log("Game Over");
-            gameManager.IsOver(true);
+            gameManager.IsOver(true, "Cat");
             audioSource.PlayOneShot(audioSource.clip, volume);
             counter--;
         }
@@ -29,7 +29,7 @@ public class GameOver : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D other) {  
         if (other.gameObject.CompareTag("Player")){
             Debug.Log("Game Over");
-            gameManager.IsOver(true);
+            gameManager.IsOver(true, "Dog");
             audioSource.PlayOneShot(audioSource.clip, volume);
         }
     }
