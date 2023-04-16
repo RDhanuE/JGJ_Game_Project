@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class GameOver : MonoBehaviour
 {
+    public AudioSource audioSource;
+    private float volume = 0.8f;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,6 +22,7 @@ public class GameOver : MonoBehaviour
         if (other.gameObject.CompareTag("Player")){
             Debug.Log("Game Over");
             Time.timeScale = 0f;
+            audioSource.PlayOneShot(audioSource.clip, volume);
         }
     }
 }
