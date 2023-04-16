@@ -10,6 +10,7 @@ public class AutomaticMovement : MonoBehaviour
     public float tileSize = 1f;
     private Vector3 lastDirection;
     public GameObject Pacman;
+    private bool isWalking;
     // Start is called before the first frame update
     void Start()
     {
@@ -69,6 +70,7 @@ public class AutomaticMovement : MonoBehaviour
         }
 
         transform.position = Vector3.MoveTowards(transform.position, movePoint.position, moveSpeed * Time.deltaTime);
+        isWalking = transform.position != movePoint.position;
     }
 
     private void UpdateDestinationTile(Vector3 upTile, Vector3 leftTile, Vector3 downTile, Vector3 rightTile)
@@ -93,5 +95,8 @@ public class AutomaticMovement : MonoBehaviour
             movePoint.position = rightTile;
             lastDirection = Vector3.right;
         }
+    }
+    public bool IsWalking() {
+        return isWalking;
     }
 }

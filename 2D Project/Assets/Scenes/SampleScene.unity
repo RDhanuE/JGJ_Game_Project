@@ -430,6 +430,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movement: {fileID: 153440934}
+  automaticMovement: {fileID: 153440929}
 --- !u!82 &153440938
 AudioSource:
   m_ObjectHideFlags: 0
@@ -5275,6 +5276,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movement: {fileID: 1674993051}
+  automaticMovement: {fileID: 1674993056}
 --- !u!95 &1674993059
 Animator:
   serializedVersion: 5
