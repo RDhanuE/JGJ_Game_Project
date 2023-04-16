@@ -8,7 +8,6 @@ public class AutomaticMovement : MonoBehaviour
     public Transform movePoint;
     public LayerMask obstacle, Floor_Crossroad;
     public float tileSize = 1f;
-
     private Vector3 lastDirection;
     public GameObject Pacman;
     // Start is called before the first frame update
@@ -28,7 +27,6 @@ public class AutomaticMovement : MonoBehaviour
             Vector3 leftTile = movePoint.position + new Vector3(-tileSize, 0f, 0f);
             
             if (Physics2D.OverlapPoint(transform.position, Floor_Crossroad)){
-                Debug.Log("enter crossroads, last direction = " + lastDirection);
                 if (lastDirection == Vector3.up || lastDirection == Vector3.down){
                     if(transform.position.x >= Pacman.transform.position.x && !Physics2D.OverlapCircle(new Vector2(transform.position.x - 1, transform.position.y), 0.2f, obstacle)){
                         movePoint.position = leftTile;
@@ -38,11 +36,11 @@ public class AutomaticMovement : MonoBehaviour
                         movePoint.position = rightTile;
                         lastDirection = Vector3.right;
                     }
-                    else if(lastDirection == Vector3.up){
+                    else if(lastDirection == Vector3.down){
                         movePoint.position = downTile;
                         lastDirection = Vector3.down;
                     }
-                    else if(lastDirection == Vector3.down){
+                    else if(lastDirection == Vector3.up){
                         movePoint.position = upTile;
                         lastDirection = Vector3.up;
                     }
@@ -56,17 +54,17 @@ public class AutomaticMovement : MonoBehaviour
                         movePoint.position = upTile;
                         lastDirection = Vector3.up;
                     }
-                    else if(lastDirection == Vector3.left){
+                    else if(lastDirection == Vector3.right){
                         movePoint.position = rightTile;
                         lastDirection = Vector3.right;
                     }
-                    else if(lastDirection == Vector3.right){
+                    else if(lastDirection == Vector3.left){
                         movePoint.position = leftTile;
                         lastDirection = Vector3.left;
                     }
                 }
             } else {
-            UpdateDestinationTile(upTile, rightTile, downTile, leftTile);
+            UpdateDestinationTile(upTile, leftTile, downTile, rightTile);
             }
         }
 
@@ -79,7 +77,6 @@ public class AutomaticMovement : MonoBehaviour
         {
             movePoint.position = upTile;
             lastDirection = Vector3.up;
-
         }
         else if (lastDirection != Vector3.right && !Physics2D.OverlapCircle(leftTile, 0.2f, obstacle))
         {
