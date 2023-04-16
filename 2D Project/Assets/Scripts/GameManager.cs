@@ -8,12 +8,15 @@ public class GameManager : MonoBehaviour
 {
     [SerializeField]private GameObject gameOverScreen;
     [SerializeField]private Button retryButton;
+    [SerializeField]private Button exitButton;
     [SerializeField]private List<GameObject> ghosts = new List<GameObject>();
     [SerializeField]private GameObject cat;
     private void Start() {
         IsOver(false, null);
-        retryButton = gameOverScreen.GetComponentInChildren<Button>();
+        retryButton = gameOverScreen.transform.GetChild(1).GetComponent<Button>();
         retryButton.onClick.AddListener(delegate { ReloadScene(); });
+        exitButton = gameOverScreen.transform.GetChild(2).GetComponent<Button>();
+        exitButton.onClick.AddListener(delegate { ExitGame(); } );
         List<Vector2> ghostA_spawnPos = new List<Vector2>(3);
         List<Vector2> ghostB_spawnPos = new List<Vector2>(3);
         List<Vector2> cat_spawnPos = new List<Vector2>(3);
