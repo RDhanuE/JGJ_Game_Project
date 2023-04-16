@@ -15,7 +15,6 @@ public class CatMovement : MonoBehaviour
     [SerializeField]private Vector2 lastPos = new Vector2();
     [SerializeField]List<int> dirAvailable = new List<int>();
     private Vector2 upTile, rightTile, downTile, leftTile;
-    private bool isWalking;
 
     private void Start() {
         jarakPandang = 3;
@@ -104,7 +103,6 @@ public class CatMovement : MonoBehaviour
             }
         }
         transform.position = Vector2.MoveTowards((Vector2)transform.position, (Vector2)movePoint.position, speed*Time.deltaTime);
-        isWalking = (Vector2)transform.position != (Vector2)movePoint.position;
     }
     private bool IsValid(Vector2 dir) {
         return !Physics2D.OverlapCircle(dir, 0.2f, obstacle);
@@ -167,8 +165,5 @@ public class CatMovement : MonoBehaviour
         }
         // Debug.Log(nextState.Count);
         return nextState;
-    }
-    public bool IsWalking() {
-        return isWalking;
     }
 }
